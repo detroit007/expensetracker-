@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.main_container {
+	width: 30%;
+	margin-top: 0;
+	margin-bottom: 0; 
+	margin-right: auto;
+	margin-left: auto;
+	font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+} 
+
+.header {
+	background-color: orange;
+	padding: 15;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance_box {
+	background-color: purple;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.expense_details {
+	background-color: pink;
+	display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.saving {
+	width: 50%;
+	background-color: yellow
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense {
+	width: 50%;
+	background-color: red
+}
+
+.transectionList_box {
+	background-color: green;
+}
+
+.transectionList_box ul {
+	padding: 0;
+}
+
+.history_box {
+	height: 50px;
+	display: flex; 
+	background-color: pink;
+}
+
+.history_name {
+	width: 50%;
+	padding-left: 20px;
+}
+
+.history_amount {
+	width: 50%;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.del_history {
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	border-style: none;
+	text-align: center;
+	color: white;
+}
+
+.expense_list_style {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+}
+
+.transection_box {
+	background-color: grey;
+	display: block;
+
+}
+
+.name {
+	width: 100%;
+	padding: 0;
+	border-style: none;
+
+}
+
+.amount {
+	width: 100%;
+	padding: 0;
+	border-style: none;
+}
+
+.btn {
+	width: 100%
 }
