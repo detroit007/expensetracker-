@@ -1,12 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import AmountHistory from './AmountHistory';
 
 import { Context } from '../context/ExpenseContext';
 
 const TransectionsList =() =>{
-
-	const context = useContext(Context);
 
 const { transections } = useContext(Context);
 
