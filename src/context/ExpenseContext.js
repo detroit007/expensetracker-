@@ -1,8 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import ExpenseReducer from './ExpenseReducer';
 
-import EXPENSE from '../models/expense';
-
 export const Context = createContext();
 
 const Provider = ({children})  =>{

@@ -2,8 +2,6 @@ import React, { useContext, useState } from 'react';
 
 import { Context } from '../context/ExpenseContext';
 
-import EXPENSE from '../models/expense';
-
 const Transection =() =>{
 
 	const { addExpenseHandler } = useContext(Context);

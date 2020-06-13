@@ -4,8 +4,6 @@ import AmountHistory from './AmountHistory';
 
 import { Context } from '../context/ExpenseContext';
 
-import EXPENSE from '../models/expense';
-
 const TransectionsList =() =>{
 
 	const context = useContext(Context);
