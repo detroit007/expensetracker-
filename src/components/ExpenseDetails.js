@@ -8,13 +8,13 @@ const ExpenseDetails =() =>{
 
 	const amounts = transections.map(transaction => transaction.amount);
 
-	const saving = amounts.filter(item => item > 0 ).
-							reduce( (a,b) => (a+=b), 0 ).
-							toFixed(2);
+	const saving = amounts.filter(item => item > 0 )
+							.reduce( (a,b) => (a+=b), 0 )
+							.toFixed(2);
 
-	const expense = amounts.filter(item => item < 0 ).
-							reduce( (a,b) => (a+=b), 0 ).
-							toFixed(2);
+	const expense = amounts.filter(item => item < 0 )
+							.reduce( (a,b) => (a+=b), 0 )
+							.toFixed(2);
 
 	return(
 		<div className='expense_details'>

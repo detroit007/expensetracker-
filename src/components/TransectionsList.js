@@ -8,11 +8,7 @@ const TransectionsList =() =>{
 
 	const context = useContext(Context);
 
-const [ inputName, setInputName] = useState('');
-
-const [ amount, setAmount] = useState('');
-
-const { transections, deleteExpenseHandler } = useContext(Context);
+const { transections } = useContext(Context);
 
 	return(
 		<div className='transectionList_box'>

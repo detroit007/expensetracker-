@@ -5,7 +5,6 @@ import  Provider  from './context/ExpenseContext'
 import Header from './components/Header';
 import Balance from './components/Balance';
 import ExpenseDetails from './components/ExpenseDetails';
-import AmountHistory from './components/AmountHistory';
 import Transection from './components/Transections';
 import TransectionsList from './components/TransectionsList';
 
