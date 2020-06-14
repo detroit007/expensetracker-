@@ -64,7 +64,7 @@ const [ amount, setAmount] = useState('');
 		          	<div className='btn_box'>
 			          <button className='btn' onClick={()=> onSubmit(transection)}
 			          >
-			          	Add button
+			          	SUBMIT
 			          </button>
 		          </div>
 
