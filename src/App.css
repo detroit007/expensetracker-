@@ -15,9 +15,19 @@ h1, h2, h3, h4, p {
 	padding: 0;
 } 
 
+.header {
+	background-color: #19aae8;
+	/*border-radius: 20px;*/
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+
 .header h3{
 	text-align: center;
 	padding-top: 20px;
+	color: white;
+	padding-bottom: 10px;
 }
 
 .headWithBalance {
