@@ -5,6 +5,7 @@ import  Provider  from './context/ExpenseContext'
 import HeadWithBalance from './screens/HeadWithBalance'
 import Transection from './components/Transections';
 import TransectionsList from './components/TransectionsList';
+import Footer from './components/Footer';
 
 
 
@@ -20,6 +21,8 @@ function App() {
         <TransectionsList />
 
         <Transection />
+
+        <Footer />
 
       </div>
     </Provider>

@@ -1,6 +1,7 @@
 .main_container {
 	width: 30%;
-	background-color: #80d4f9;
+	min-width: 445px;
+	background-color: #19aae8;
 	height: 100%;
 	margin-top: 0;
 	margin-bottom: 0; 
@@ -155,7 +156,10 @@ h1, h2, h3, h4, p {
 .transection_container {
 	padding-top: 30px;
 	background-color: #80d4f9;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
 }
 
 .transection_box {
@@ -222,9 +226,16 @@ h1, h2, h3, h4, p {
 	color: red;
 }
 
-button:active {
-outline: none;
-border: none;
+.footer_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #19aae8;
+	height: 50px;
+	text-align: center;
 }
 
-button:focus {outline:0;}
+.footer_box p {
+	font-size: 12px;
+	color: white;
+}
