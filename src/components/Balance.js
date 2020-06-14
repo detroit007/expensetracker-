@@ -11,13 +11,16 @@ const Balance =() =>{
 	 const sum = amounts.reduce( (a,b) => (a += b),0);
 
 
-	 const sign = sum > 0 ? ' ': '-';
+	 const sign = sum >= 0 ? ' ': '-';
+
+	 const clr = sum >= 0 ? 'plus' : 'negative';
 
 	return(
 		<div className='balance_box'>
 
-        <h3>Balance</h3>
-        <h2>{sign} ${Math.abs(sum)}</h2>
+	        
+	        <h2><span className={clr}>{sign} ${Math.abs(sum).toFixed(2)}</span></h2>
+	        <p>Account Balance</p>
 
   		</div>
 	)

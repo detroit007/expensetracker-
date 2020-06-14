@@ -6,11 +6,7 @@ export const Context = createContext();
 const Provider = ({children})  =>{
 
 	const initialState ={
-		transections : [
-			{id: '456', name: 'work', amount: 400},
-			{id: '457', name: 'office', amount: 50},
-			{id: '458', name: 'bike', amount: -20}
-		],
+		transections : []
 	}
 
 	const [state, dispatch ]= useReducer(ExpenseReducer, initialState);

@@ -8,19 +8,26 @@ const TransectionsList =() =>{
 
 const { transections } = useContext(Context);
 
+
 	return(
-		<div className='transectionList_box'>
+		<div className='transectionList'>
+			<div className='transectionList_box'>
 
-			<h3>history</h3>
-	        <hr/>
+				<div className='transectionList_heading'>
+					<h3>Payment Details</h3>
+				</div>
 
-	        <ul >
-	        	{transections.map(transection=> (
-			  			<AmountHistory key={transection.id} transection={transection} />
-				    ))
-				}
-	        </ul>
+				<p className='no_transection' >{transections.length < 1 ? 'No transection made yet!' : null}</p>
 
+
+		        <ul >
+		        	{transections.map(transection=> (
+				  			<AmountHistory key={transection.id} transection={transection} />
+					    ))
+					}
+		        </ul>
+
+	        </div>
         </div>
 	)
 }

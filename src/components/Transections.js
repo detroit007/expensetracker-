@@ -7,6 +7,8 @@ const Transection =() =>{
 	const { addExpenseHandler } = useContext(Context);
 
 const [ inputName, setInputName] = useState('');
+const [check, setCheck] = useState(false);
+const [errText, setErrText] = useState('');
 
 const [ amount, setAmount] = useState('');
 
@@ -16,38 +18,57 @@ const [ amount, setAmount] = useState('');
 		amount: +amount,
 	};
 
-	return(
-		<div className='transection_box'>
+	const onSubmit = (transection) =>{
 
-	        <h2>Transections</h2>
-	        <hr/>
 
-	        	<p>Add Name</p>
-		        <input 
-		          	className='name' 
-		          	placeholder='add name'
-		          	value={inputName}
-		          	onChange={e=>{setInputName(e.target.value)}}
-	          	/>
-
-          		<p>Add Amount</p>
-
-	          	<input 
-		          	className='amount' 
-		          	placeholder='add amount'
-		          	value={amount}
-		          	onChange={e=>{setAmount(e.target.value)}}
-	          	/>
-
-	          <button className='btn' onClick={()=>{
-	          		addExpenseHandler(transection);
+		if(inputName === ''){
+			setCheck(true);
+			setErrText('Enter some title first!')
+		}else if(amount === ''){
+			setCheck(true);
+			setErrText('Enter some amount!')
+		} else{
+			setCheck(false);
+			addExpenseHandler(transection);
 	          		setInputName('');
 	          		setAmount('');
-          		}}
-	          >
-	          	Add button
-	          </button>
+		}
+	}
 
+	return(
+		<div className='transection_container'>
+			<div className='transection_box'>
+
+		        <div className='transectionList_heading'>
+					<h3>Add Transection</h3>
+				</div>
+
+		        	{ check ?  <p className='errText'>{errText}</p> : null }
+
+
+			        <input 
+			          	className='name' 
+			          	placeholder='Enter title'
+			          	value={inputName}
+			          	onChange={e=>{setInputName(e.target.value)}}
+		          	/>
+
+
+		          	<input 
+			          	className='amount' 
+			          	placeholder='Enter amount'
+			          	value={amount}
+			          	onChange={e=>{setAmount(e.target.value)}}
+		          	/>
+
+		          	<div className='btn_box'>
+			          <button className='btn' onClick={()=> onSubmit(transection)}
+			          >
+			          	Add button
+			          </button>
+		          </div>
+
+	        </div>
         </div>
 	)
 }
