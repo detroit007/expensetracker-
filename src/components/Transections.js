@@ -27,11 +27,18 @@ const [ amount, setAmount] = useState('');
 		}else if(amount === ''){
 			setCheck(true);
 			setErrText('Enter some amount!')
-		} else{
-			setCheck(false);
-			addExpenseHandler(transection);
-	          		setInputName('');
-	          		setAmount('');
+		} else {
+			const reg = /^\-?(\d+\.?\d*|\d*\.?\d+)$/
+			if(reg.test(amount)){
+				
+				setCheck(false);
+				addExpenseHandler(transection);
+		          		setInputName('');
+		          		setAmount('');
+		    }else{
+      			setCheck(true);
+				setErrText('Enter some amount!')
+      		}
 		}
 	}
 
@@ -58,6 +65,7 @@ const [ amount, setAmount] = useState('');
 			          	className='amount' 
 			          	placeholder='Enter amount'
 			          	value={amount}
+			          	type='number'
 			          	onChange={e=>{setAmount(e.target.value)}}
 		          	/>
 
