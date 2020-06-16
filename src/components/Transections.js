@@ -28,6 +28,7 @@ const [ amount, setAmount] = useState('');
 			setCheck(true);
 			setErrText('Enter some amount!')
 		} else {
+			/* eslint-disable */
 			const reg = /^\-?(\d+\.?\d*|\d*\.?\d+)$/
 			if(reg.test(amount)){
 				
